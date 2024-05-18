@@ -16,7 +16,7 @@ function findTagInParents(el: Element | null, attr: string): boolean {
 function _CirclePointer() {
   const cursor = React.useRef<HTMLDivElement>(null);
   React.useLayoutEffect(() => {
-    function handlePointerMove(event: PointerEvent) {
+    function handlePointerMove(event: MouseEvent) {
       if (!cursor.current) return;
       const { x, y } = event;
       cursor.current.style.left = `${x}px`;
@@ -33,9 +33,9 @@ function _CirclePointer() {
       }
     }
 
-    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("mousemove", handlePointerMove);
     return () => {
-      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("mousemove", handlePointerMove);
     };
   }, []);
 
@@ -45,10 +45,10 @@ function _CirclePointer() {
     function handlePointerMove() {
       if (!cursor.current) return;
       cursor.current.classList.remove("invisible");
-      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("mousemove", handlePointerMove);
     }
 
-    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("mousemove", handlePointerMove);
   }, []);
 
   return (

@@ -26,7 +26,7 @@ function Menu() {
 
   const [isOpen, setOpen] = React.useState(false);
 
-  const handlePointerMove = React.useCallback((event: React.PointerEvent) => {
+  const handleMouseMove = React.useCallback((event: React.MouseEvent) => {
     if (!dot.current) return;
 
     const target = event.target as HTMLElement;
@@ -88,7 +88,7 @@ function Menu() {
         >
           <div
             className="flex flex-1 flex-col justify-center items-center gap-4 pointer-events-auto"
-            onPointerMove={handlePointerMove}
+            onMouseMove={handleMouseMove}
           >
             <a
               data-m-item
