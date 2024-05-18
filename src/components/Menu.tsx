@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -54,82 +55,103 @@ function Menu() {
         className="fixed top-[2rem] right-[2rem] w-10 h-10 flex justify-center items-center rounded-full bg-white z-40"
         onMouseDown={() => setOpen(!isOpen)}
       >
-        <IoMenu className="z-40" />
+        <motion.div
+          className="z-40"
+          animate={{ color: isOpen ? "#ffffff" : "#1d1d1b" }}
+        >
+          <IoMenu />
+        </motion.div>
 
-        <div
+        <motion.div
           ref={dot}
           className="absolute inset bg-[#1d1d1b] rounded-full pointer-events-none z-30"
+          animate={{
+            width: isOpen ? "500vh" : "0px",
+            height: isOpen ? "500vh" : "0px",
+          }}
+          transition={{ duration: 1, ease: "circInOut" }}
           style={{
-            transitionProperty: "width, height, background-color",
-            transitionDuration: "1s, 1s, 150ms",
+            transitionProperty: "background-color",
+            transitionDuration: "150ms",
             transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
-            width: isOpen ? "400vh" : "0px",
-            height: isOpen ? "400vh" : "0px",
           }}
         />
       </a>
 
-      <div
-        className="fixed inset-0 flex flex-col justify-between items-center p-16 z-40 text-white pointer-events-none"
-        style={{ visibility: isOpen ? "visible" : "hidden" }}
-      >
-        <div
-          className="flex flex-1 flex-col justify-center items-center gap-4 pointer-events-auto"
-          onPointerMove={handlePointerMove}
+      {isOpen ? (
+        <motion.div
+          className="fixed inset-0 flex flex-col justify-between items-center p-16 z-40 text-white pointer-events-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ delay: 0.5, duration: 1, ease: "circInOut" }}
         >
-          <a
-            data-m-item
-            className="text-5xl font-semibold"
-            style={{
-              transitionProperty: "color",
-              transitionDuration: "150ms",
-              transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
-            }}
+          <div
+            className="flex flex-1 flex-col justify-center items-center gap-4 pointer-events-auto"
+            onPointerMove={handlePointerMove}
           >
-            Home
-          </a>
-          <a
-            data-m-item
-            className="text-5xl font-semibold"
-            style={{
-              transitionProperty: "color",
-              transitionDuration: "150ms",
-              transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
-            }}
-          >
-            Art Therapy
-          </a>
-          <a
-            data-m-item
-            className="text-5xl font-semibold"
-            style={{
-              transitionProperty: "color",
-              transitionDuration: "150ms",
-              transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
-            }}
-          >
-            About Us
-          </a>
-          <a
-            data-m-item
-            className="text-5xl font-semibold"
-            style={{
-              transitionProperty: "color",
-              transitionDuration: "150ms",
-              transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
-            }}
-          >
-            Contacts
-          </a>
-        </div>
+            <a
+              data-m-item
+              className="text-3xl sm:text-5xl font-semibold"
+              style={{
+                transitionProperty: "color",
+                transitionDuration: "150ms",
+                transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
+              }}
+            >
+              Home
+            </a>
+            <a
+              data-m-item
+              className="text-3xl sm:text-5xl font-semibold"
+              style={{
+                transitionProperty: "color",
+                transitionDuration: "150ms",
+                transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
+              }}
+            >
+              Art Therapy
+            </a>
+            <a
+              data-m-item
+              className="text-3xl sm:text-5xl font-semibold"
+              style={{
+                transitionProperty: "color",
+                transitionDuration: "150ms",
+                transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
+              }}
+            >
+              About Us
+            </a>
+            <a
+              data-m-item
+              className="text-3xl sm:text-5xl font-semibold"
+              style={{
+                transitionProperty: "color",
+                transitionDuration: "150ms",
+                transitionTimingFunction: "cubic-bezier(0.87, 0, 0.13, 1)",
+              }}
+            >
+              Contacts
+            </a>
+          </div>
 
-        <div className="flex-grow-1 flex flex-row pointer-events-auto">
-          <FaFacebook />
-          <FaTiktok />
-          <FaInstagram />
-          <FaLinkedin />
-        </div>
-      </div>
+          <div className="flex-grow-1 flex flex-row gap-4 pointer-events-auto">
+            <a>
+              <FaFacebook />
+            </a>
+            <a>
+              <FaTiktok />
+            </a>
+            <a>
+              <FaInstagram />
+            </a>
+            <a>
+              <FaLinkedin />
+            </a>
+          </div>
+        </motion.div>
+      ) : null}
     </>
   );
 }

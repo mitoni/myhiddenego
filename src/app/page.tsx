@@ -121,10 +121,18 @@ export default function Home() {
       <footer className="min-h-48 bg-[#1d1d1b] text-sm">
         <div className="pt-16 pb-8 text-white grid grid-rows-3 sm:grid-rows-1 grid-cols-1 sm:grid-cols-3">
           <div className="flex gap-4 items-center justify-center sm:justify-start">
-            <FaFacebook />
-            <FaTiktok />
-            <FaInstagram />
-            <FaLinkedin />
+            <a>
+              <FaFacebook />
+            </a>
+            <a>
+              <FaTiktok />
+            </a>
+            <a>
+              <FaInstagram />
+            </a>
+            <a>
+              <FaLinkedin />
+            </a>
           </div>
           <div className="flex justify-center">
             <a href="/">
