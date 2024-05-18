@@ -53,9 +53,9 @@ export default function ArtTherapy() {
       </div>
 
       <section>
-        <div className="grid grid-rows-1 grid-cols-2">
-          <div className="relative p-16">
-            <div className="absolute inset-0 w-[110%] bg-[#46b0fe] z-[-1]" />
+        <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2">
+          <div className="relative p-3 sm:p-16">
+            <div className="absolute inset-0 sm:w-[110%] bg-[#46b0fe] z-[-1]" />
             <p>
               “My images partly reflect my difficult past which I transform each
               time into something eternal and unforgettable. Photography for me
@@ -80,7 +80,7 @@ export default function ArtTherapy() {
 
           <div className="relative">
             <div
-              className="absolute inset-0 w-full h-full bg-center bg-cover -translate-y-16"
+              className="absolute inset-0 w-full h-full bg-center bg-cover sm:-translate-y-16"
               style={{
                 backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE04.jpg)",
               }}
@@ -91,20 +91,22 @@ export default function ArtTherapy() {
 
       <div className="font-semibold text-3xl sm:text-6xl inline-flex items-center w-full my-16 flex-row-reverse">
         <span className="h-4 w-16 ml-4 bg-[#ff448f]" />
-        <h2 className="text-[#ff448f] uppercase">RESTORATIVE PHOTOGRAPHY</h2>
+        <h2 className="text-[#ff448f] text-right uppercase">
+          RESTORATIVE PHOTOGRAPHY
+        </h2>
       </div>
 
       <section className="pb-64">
-        <div className="grid grid-rows-1 grid-cols-2">
+        <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2">
           <div className="relative flex flex-col justify-end">
             <div
-              className="absolute inset-0 w-[150%] h-full bg-center bg-cover z-[-1]"
+              className="absolute inset-0 sm:w-[150%] h-full bg-center bg-cover z-[-1]"
               style={{
                 backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE05.jpg)",
               }}
             />
 
-            <div className="p-8 w-[75%] font-semibold text-[#ff448f] translate-y-1/3">
+            <div className="p-8 sm:w-[75%] font-semibold text-[#ff448f] sm:translate-y-1/3">
               <p className="text-right">
                 “The authentic task of the photographic portrait is to extract
                 the psychological truth of the subject..”
@@ -113,7 +115,7 @@ export default function ArtTherapy() {
             </div>
           </div>
 
-          <div className="relative top-[50%] left-[-25%] w-[125%] p-16">
+          <div className="relative sm:top-[50%] sm:left-[-25%] sm:w-[125%] p-4 sm:p-16">
             <div className="absolute inset-0 bg-[#ff448f] z-[-1]" />
             <p>
               Luckily, there is culture, the only thing capable of redeeming
@@ -138,9 +140,9 @@ export default function ArtTherapy() {
       </div>
 
       <section className="pb-32">
-        <div className="grid grid-rows-1 grid-cols-2">
-          <div className="relative p-16">
-            <div className="absolute inset-0 w-[120%] bg-[#fad70c] z-[-1]" />
+        <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2">
+          <div className="relative p-4 sm:p-16">
+            <div className="absolute inset-0 sm:w-[120%] bg-[#fad70c] z-[-1]" />
             <p>
               Thus began her in-depth theoretical research on the subject of the
               portrait, discovering that she was not the only person in history
@@ -163,7 +165,7 @@ export default function ArtTherapy() {
 
           <div className="relative">
             <div
-              className="absolute inset-0 w-full h-full bg-center bg-cover translate-y-16"
+              className="absolute inset-0 w-full h-full bg-center bg-cover sm:translate-y-16"
               style={{
                 backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE06.jpg)",
               }}
@@ -180,7 +182,7 @@ export default function ArtTherapy() {
       </div>
 
       <section className="pb-16">
-        <div className="grid gap-x-8 grid-rows-1 grid-cols-[0.5fr_1fr_0.5fr]">
+        <div className="grid gap-x-8 grid-rows-3 sm:grid-rows-1 sm:grid-cols-[0.5fr_1fr_0.5fr]">
           <div
             className="bg-center bg-cover"
             style={{
@@ -215,7 +217,9 @@ export default function ArtTherapy() {
 
       <div className="absolute font-semibold text-3xl sm:text-6xl inline-flex items-center w-full my-32 flex-row-reverse">
         <span className="h-4 w-16 ml-4 bg-[#fad70c]" />
-        <h2 className="text-[#fad70c] uppercase">RESTORATIVE PHOTOGRAPHY</h2>
+        <h2 className="text-[#fad70c] text-right uppercase">
+          RESTORATIVE PHOTOGRAPHY
+        </h2>
       </div>
 
       <section
@@ -269,21 +273,23 @@ export default function ArtTherapy() {
 
       <div className="font-semibold text-3xl sm:text-6xl inline-flex items-center w-full my-16 flex-row-reverse">
         <span className="h-4 w-16 ml-4 bg-[#ff448f]" />
-        <h2 className="text-[#ff448f] uppercase">THE SOUL IN THE PORTRAIT</h2>
+        <h2 className="text-[#ff448f] text-right uppercase">
+          THE SOUL IN THE PORTRAIT
+        </h2>
       </div>
 
       <section className="pb-96">
-        <div className="grid grid-rows-1 grid-cols-2">
+        <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2">
           <div className="relative flex flex-col justify-end">
             <div
-              className="absolute inset-0 left-[-25%] w-[125%] h-[150%] bg-center bg-cover z-[-1]"
+              className="absolute inset-0 sm:left-[-25%] sm:w-[125%] sm:h-[150%] bg-center bg-cover z-[-1]"
               style={{
                 backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE09.jpg)",
               }}
             />
           </div>
 
-          <div className="relative top-[25%] left-[-20%] w-[120%] p-16">
+          <div className="relative sm:top-[25%] sm:left-[-20%] sm:w-[120%] p-4 sm:p-16">
             <div className="absolute inset-0 bg-[#ff448f] z-[-1]" />
             <p>
               Portraiture is more than just capturing a face. It represents an
@@ -323,8 +329,8 @@ export default function ArtTherapy() {
         </h2>
       </div>
 
-      <section className="pb-32">
-        <div className="grid grid-rows-1 grid-cols-2">
+      <section>
+        <div className="grid-rows-2 sm:grid grid-rows-1 grid-cols-1 sm:grid-cols-2">
           <div className="relative text-[#46b0fe] font-semibold">
             <p>
               “…I often feel that people come to me to be photographed as they
@@ -340,9 +346,9 @@ export default function ArtTherapy() {
             <p>Richard Avedon</p>
           </div>
 
-          <div className="relative z-[-1]">
+          <div className="relative z-[-1] min-h-64">
             <div
-              className="absolute inset-0 left-[-50%] bottom-0 w-[200%] h-[150%] bg-center bg-contain bg-no-repeat bg-bottom"
+              className="absolute inset-0 sm:left-[-50%] bottom-0 sm:w-[200%] sm:h-[150%] bg-contain bg-no-repeat bg-bottom"
               style={{
                 backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE10.jpg)",
               }}
