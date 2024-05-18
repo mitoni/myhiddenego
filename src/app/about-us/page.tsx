@@ -204,8 +204,8 @@ export default function AboutUs() {
           }}
         ></div>
 
-        <div className="relative">
-          <div className="sm:w-[50%] sm:-translate-y-1/2 p-4 sm:p-16">
+        <div>
+          <div className="relative sm:w-[50%] sm:-translate-y-1/2 p-4 sm:p-16">
             <div className="absolute inset-0 sm:left-[-20%] sm:w-[120%] bg-[#ff448f] z-[-1]" />
             <p>
               The MHE Project is conceived as a format that can be implemented
@@ -215,7 +215,7 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="w-full flex justify-end mb-8">
+          <div className="w-full flex justify-end mb-8 p-4">
             <div className="w-full sm:w-1/2 text-[#ff448f] font-semibold">
               <p>
                 “VALUE YOURSELF! Never look down. Always hold your chin up high.
