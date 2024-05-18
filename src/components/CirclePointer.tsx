@@ -56,7 +56,7 @@ function _CirclePointer() {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50 mix-blend-difference">
+    <div className="fixed inset-0 pointer-events-none z-50 mix-blend-exclusion">
       <div
         ref={cursor}
         className="invisible absolute bg-white rounded-full -translate-x-1/2 -translate-y-1/2"

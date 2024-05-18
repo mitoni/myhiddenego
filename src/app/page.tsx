@@ -1,13 +1,8 @@
-import { Menu } from "@/components/Menu";
-import { CirclePointer } from "@/components/CirclePointer";
-import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
     <main>
-      <CirclePointer />
-      <Menu />
       <section
         className="bg-center bg-cover bg-blend-multiply"
         style={{
@@ -15,7 +10,7 @@ export default function Home() {
             "linear-gradient(#1d1d1bB3, #1d1d1bB3), url(/imgs/Monica-Silva-Rossella-MHE-Home.jpg)",
         }}
       >
-        <div className="py-16 min-h-96 text-white">
+        <div className="py-16 min-h-96">
           <p className="italic">
             “…it is the artist&apos;s gaze on the world that is fundamental both
             when he communicates beauty and joy to us, and when, much more
@@ -33,7 +28,7 @@ export default function Home() {
         <h2 className="text-[#46b0fe] uppercase">THE PROJECT</h2>
       </div>
 
-      <section className="bg-[#1d1d1b] py-16 min-h-80 text-white flex flex-col justify-center">
+      <section className="bg-[#1d1d1b] py-16 min-h-80 flex flex-col justify-center">
         <div>
           <p>
             Welcome to MY HIDDEN EGO a transformative project conceived by
@@ -70,7 +65,7 @@ export default function Home() {
       />
 
       <div className="absolute right-0 mr-4 sm:mr-20 font-semibold text-4xl sm:text-7xl -translate-y-1/4 inline-flex items-center text-right z-10">
-        <h2 className="text-white uppercase">
+        <h2 className="uppercase">
           ARE YOU READY TO <br className="hidden sm:block" /> CHALLENGE
           YOURSELF?
         </h2>
@@ -110,51 +105,14 @@ export default function Home() {
           <div className="mr-4 sm:mr-20 mb-16 flex justify-end">
             <a
               href="/"
-              className="uppercase font-semibold px-4 py-2 text-white border border-[#f0298c]"
+              className="uppercase font-semibold px-4 py-2 border border-[#f0298c]"
             >
               subscribe to the newsletter
             </a>
           </div>
         </div>
       </div>
-
-      <footer className="min-h-48 bg-[#1d1d1b] text-sm">
-        <div className="pt-16 pb-8 text-white grid grid-rows-3 sm:grid-rows-1 grid-cols-1 sm:grid-cols-3">
-          <div className="flex gap-4 items-center justify-center sm:justify-start">
-            <a>
-              <FaFacebook />
-            </a>
-            <a>
-              <FaTiktok />
-            </a>
-            <a>
-              <FaInstagram />
-            </a>
-            <a>
-              <FaLinkedin />
-            </a>
-          </div>
-          <div className="flex justify-center">
-            <a href="/">
-              <Image
-                className="p-4"
-                src="/imgs/logo_mhe.svg"
-                alt="logo my hidden ego"
-                width={160}
-                height={160}
-              />
-            </a>
-          </div>
-          <div className="flex justify-center sm:justify-end items-center">
-            <div className="flex flex-col items-start">
-              <a href="/">Home</a>
-              <a href="/">Art Therapy</a>
-              <a href="/">About Us</a>
-              <a href="/">Contacts</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
