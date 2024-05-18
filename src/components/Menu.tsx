@@ -115,6 +115,7 @@ function Menu() {
               Art Therapy
             </a>
             <a
+              href="/about-us"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
               style={{

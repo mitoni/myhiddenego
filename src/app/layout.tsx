@@ -4,6 +4,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { CirclePointer } from "@/components/CirclePointer";
 import { Menu } from "@/components/Menu";
+import { Footer } from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <CirclePointer />
         <Menu />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -54,7 +54,7 @@ export default function ArtTherapy() {
 
       <section>
         <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2">
-          <div className="relative p-3 sm:p-16">
+          <div className="relative p-4 sm:p-16">
             <div className="absolute inset-0 sm:w-[110%] bg-[#46b0fe] z-[-1]" />
             <p>
               “My images partly reflect my difficult past which I transform each
@@ -356,8 +356,6 @@ export default function ArtTherapy() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

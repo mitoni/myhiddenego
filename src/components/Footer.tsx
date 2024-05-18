@@ -34,7 +34,7 @@ function Footer() {
           <div className="flex flex-col items-start">
             <a href="/">Home</a>
             <a href="/art-therapy">Art Therapy</a>
-            <a href="/">About Us</a>
+            <a href="/about-us">About Us</a>
             <a href="/">Contacts</a>
           </div>
         </div>

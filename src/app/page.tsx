@@ -1,5 +1,3 @@
-import { Footer } from "@/components/Footer";
-
 export default function Home() {
   return (
     <main>
@@ -112,7 +110,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

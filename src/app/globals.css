@@ -31,8 +31,6 @@ body {
 section>div, footer>div {
     max-width: 1280px;
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 body, a, button {
