@@ -1,4 +1,5 @@
-import { CirclePointer } from "@/components/useCirclePointer";
+import { Menu } from "@/components/Menu";
+import { CirclePointer } from "@/components/CirclePointer";
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
@@ -6,6 +7,7 @@ export default function Home() {
   return (
     <main>
       <CirclePointer />
+      <Menu />
       <section
         className="bg-center bg-cover bg-blend-multiply"
         style={{
