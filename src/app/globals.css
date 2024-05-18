@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
-}
-
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -28,6 +22,7 @@ html {
 }
 
 body {
+    background-color: #1d1d1b;
     min-height: 100vh;
 }
 
@@ -40,4 +35,10 @@ section>div, footer>div {
 
 body, a, button {
     cursor: none;
+}
+
+@media (max-width: 780px) {
+    html {
+        font-size: 18px;
+    }
 }

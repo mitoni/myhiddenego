@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="absolute font-semibold text-7xl -translate-y-1/2 inline-flex items-center">
+      <div className="absolute font-semibold text-4xl sm:text-7xl -translate-y-1/2 inline-flex items-center">
         <span className="h-4 w-16 mr-4 bg-[#46b0fe]" />
         <h2 className="text-[#46b0fe] uppercase">THE PROJECT</h2>
       </div>
@@ -53,10 +53,10 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="absolute ml-20 font-semibold text-7xl -translate-y-1/4 inline-flex items-center">
+      <div className="absolute ml-4 sm:ml-20 font-semibold text-3xl sm:text-6xl -translate-y-1/4 inline-flex items-center">
         <h2 className="text-[#f0298c] uppercase">
           UNVEILING THE ESSENCE
-          <br /> THROUGH MY HIDDEN EGO PROJECT
+          <br className="hidden sm:block" /> THROUGH MY HIDDEN EGO PROJECT
         </h2>
       </div>
 
@@ -65,24 +65,19 @@ export default function Home() {
         style={{
           backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE02.jpg)",
         }}
-      >
-        <div></div>
-      </section>
+      />
 
-      <div className="absolute right-0 mr-20 font-semibold text-7xl -translate-y-1/4 inline-flex items-center text-right z-10">
+      <div className="absolute right-0 mr-4 sm:mr-20 font-semibold text-4xl sm:text-7xl -translate-y-1/4 inline-flex items-center text-right z-10">
         <h2 className="text-white uppercase">
-          ARE YOU READY TO <br /> CHALLENGE YOURSELF?
+          ARE YOU READY TO <br className="hidden sm:block" /> CHALLENGE
+          YOURSELF?
         </h2>
       </div>
 
       <div className="relative w-full h-32">
         <div
-          className="absolute bg-[#46b0fe]"
+          className="absolute top-0 right-0 w-[90%] sm:w-[80%] h-[150%] bg-[#46b0fe]"
           style={{
-            top: 0,
-            right: 0,
-            width: "80%",
-            height: "150%",
             zIndex: 9,
           }}
         />
@@ -90,34 +85,27 @@ export default function Home() {
 
       <div className="relative w-full h-48">
         <div
-          className="absolute bg-[#f0298c] flex flex-col justify-end"
+          className="absolute top-0 left-0 w-[90%] sm:w-[80%] h-[150%] bg-[#f0298c] flex flex-col justify-end"
           style={{
-            left: 0,
-            right: 0,
-            width: "80%",
-            height: "150%",
             zIndex: 8,
           }}
         >
-          <p className="text-[#e0dfcb] ml-20 mb-8 text-3xl uppercase">
+          <p className="text-[#e0dfcb] ml-4 sm:ml-20 mb-8 text-xl sm:text-3xl uppercase">
             Don’t miss any updates to our project.
-            <br /> Subscribe to the MHE PROJECT newsletter!
+            <br className="hidden sm:block" /> Subscribe to the MHE PROJECT
+            newsletter!
           </p>
         </div>
       </div>
 
       <div className="relative w-full h-48">
         <div
-          className="absolute bg-[#fad70c] flex flex-col justify-end"
+          className="absolute top-0 right-0 w-[90%] sm:w-[80%] h-[120%] bg-[#fad70c] flex flex-col justify-end"
           style={{
-            top: 0,
-            right: 0,
-            width: "80%",
-            height: "120%",
             zIndex: 7,
           }}
         >
-          <div className="mr-20 mb-16 flex justify-end">
+          <div className="mr-4 sm:mr-20 mb-16 flex justify-end">
             <a
               href="/"
               className="uppercase font-semibold px-4 py-2 text-white border border-[#f0298c]"
@@ -128,9 +116,9 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="bg-[#1d1d1b] min-h-48 text-sm">
-        <div className="pt-16 pb-8 text-white grid grid-rows-1 grid-cols-3">
-          <div className="flex gap-4 items-center">
+      <footer className="min-h-48 bg-[#1d1d1b] text-sm">
+        <div className="pt-16 pb-8 text-white grid grid-rows-3 sm:grid-rows-1 grid-cols-1 sm:grid-cols-3">
+          <div className="flex gap-4 items-center justify-center sm:justify-start">
             <FaFacebook />
             <FaTiktok />
             <FaInstagram />
@@ -139,6 +127,7 @@ export default function Home() {
           <div className="flex justify-center">
             <a href="/">
               <Image
+                className="p-4"
                 src="/imgs/logo_mhe.svg"
                 alt="logo my hidden ego"
                 width={160}
@@ -146,7 +135,7 @@ export default function Home() {
               />
             </a>
           </div>
-          <div className="flex justify-end items-center">
+          <div className="flex justify-center sm:justify-end items-center">
             <div className="flex flex-col items-start">
               <a href="/">Home</a>
               <a href="/">Art Therapy</a>
