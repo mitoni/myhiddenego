@@ -32,6 +32,8 @@ function _CirclePointer() {
         cursor.current.style.height = "1rem";
       }
     }
+    // detect mobile
+    if (window.innerWidth < 780) return;
 
     window.addEventListener("mousemove", handlePointerMove);
     return () => {
@@ -47,6 +49,8 @@ function _CirclePointer() {
       cursor.current.classList.remove("invisible");
       window.removeEventListener("mousemove", handlePointerMove);
     }
+    // detect mobile
+    if (window.innerWidth < 780) return;
 
     window.addEventListener("mousemove", handlePointerMove);
   }, []);
