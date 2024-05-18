@@ -1,113 +1,161 @@
+import { CirclePointer } from "@/components/useCirclePointer";
 import Image from "next/image";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <CirclePointer />
+      <section
+        className="bg-center bg-cover bg-blend-multiply"
+        style={{
+          backgroundImage:
+            "linear-gradient(#1d1d1bB3, #1d1d1bB3), url(/imgs/Monica-Silva-Rossella-MHE-Home.jpg)",
+        }}
+      >
+        <div className="py-16 min-h-96 text-white">
+          <p className="italic">
+            “…it is the artist&apos;s gaze on the world that is fundamental both
+            when he communicates beauty and joy to us, and when, much more
+            often, he confronts us with pain and anguish. Because in art there
+            is always some possibility of redemption. Or at least, I want to
+            continue to believe it: not surprisingly, I speak of art as
+            restoration.”
+          </p>
+          <p className="text-right">Stefano Ferrari (The Mirror of the Self)</p>
         </div>
+      </section>
+
+      <div className="absolute font-semibold text-7xl -translate-y-1/2 inline-flex items-center">
+        <span className="h-4 w-16 mr-4 bg-[#46b0fe]" />
+        <h2 className="text-[#46b0fe] uppercase">THE PROJECT</h2>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <section className="bg-[#1d1d1b] py-16 min-h-80 text-white flex flex-col justify-center">
+        <div>
+          <p>
+            Welcome to MY HIDDEN EGO a transformative project conceived by
+            Monica Silva, where the lens of photography becomes a portal to
+            self-discovery and empowerment. At the heart of MHE lies a profound
+            belief in the ability of art, specifically therapeutic photography,
+            to illuminate the best within us, fostering a profound journey
+            towards improved self-esteem and inner acceptance.
+          </p>
+
+          <div className="flex justify-end mt-8">
+            <a
+              href="/"
+              className="uppercase font-semibold px-4 py-2 border border-[#f0298c]"
+            >
+              discover more
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div className="absolute ml-20 font-semibold text-7xl -translate-y-1/4 inline-flex items-center">
+        <h2 className="text-[#f0298c] uppercase">
+          UNVEILING THE ESSENCE
+          <br /> THROUGH MY HIDDEN EGO PROJECT
+        </h2>
+      </div>
+
+      <section
+        className="bg-center bg-cover bg-blend-multiply h-screen"
+        style={{
+          backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE02.jpg)",
+        }}
+      >
+        <div></div>
+      </section>
+
+      <div className="absolute right-0 mr-20 font-semibold text-7xl -translate-y-1/4 inline-flex items-center text-right z-10">
+        <h2 className="text-white uppercase">
+          ARE YOU READY TO <br /> CHALLENGE YOURSELF?
+        </h2>
+      </div>
+
+      <div className="relative w-full h-32">
+        <div
+          className="absolute bg-[#46b0fe]"
+          style={{
+            top: 0,
+            right: 0,
+            width: "80%",
+            height: "150%",
+            zIndex: 9,
+          }}
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="relative w-full h-48">
+        <div
+          className="absolute bg-[#f0298c] flex flex-col justify-end"
+          style={{
+            left: 0,
+            right: 0,
+            width: "80%",
+            height: "150%",
+            zIndex: 8,
+          }}
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+          <p className="text-[#e0dfcb] ml-20 mb-8 text-3xl uppercase">
+            Don’t miss any updates to our project.
+            <br /> Subscribe to the MHE PROJECT newsletter!
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        </div>
       </div>
+
+      <div className="relative w-full h-48">
+        <div
+          className="absolute bg-[#fad70c] flex flex-col justify-end"
+          style={{
+            top: 0,
+            right: 0,
+            width: "80%",
+            height: "120%",
+            zIndex: 7,
+          }}
+        >
+          <div className="mr-20 mb-16 flex justify-end">
+            <a
+              href="/"
+              className="uppercase font-semibold px-4 py-2 text-white border border-[#f0298c]"
+            >
+              subscribe to the newsletter
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer className="bg-[#1d1d1b] min-h-48 text-sm">
+        <div className="pt-16 pb-8 text-white grid grid-rows-1 grid-cols-3">
+          <div className="flex gap-4 items-center">
+            <FaFacebook />
+            <FaTiktok />
+            <FaInstagram />
+            <FaLinkedin />
+          </div>
+          <div className="flex justify-center">
+            <a href="/">
+              <Image
+                src="/imgs/logo_mhe.svg"
+                alt="logo my hidden ego"
+                width={160}
+                height={160}
+              />
+            </a>
+          </div>
+          <div className="flex justify-end items-center">
+            <div className="flex flex-col items-start">
+              <a href="/">Home</a>
+              <a href="/">Art Therapy</a>
+              <a href="/">About Us</a>
+              <a href="/">Contacts</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
