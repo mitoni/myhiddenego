@@ -33,7 +33,7 @@ function Footer() {
         <div className="flex justify-center sm:justify-end items-center">
           <div className="flex flex-col items-start">
             <a href="/">Home</a>
-            <a href="/">Art Therapy</a>
+            <a href="/art-therapy">Art Therapy</a>
             <a href="/">About Us</a>
             <a href="/">Contacts</a>
           </div>

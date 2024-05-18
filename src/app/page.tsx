@@ -41,7 +41,7 @@ export default function Home() {
 
           <div className="flex justify-end mt-8">
             <a
-              href="/"
+              href="/art-therapy"
               className="uppercase font-semibold px-4 py-2 border border-[#f0298c]"
             >
               discover more

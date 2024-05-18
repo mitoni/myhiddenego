@@ -91,6 +91,7 @@ function Menu() {
             onMouseMove={handleMouseMove}
           >
             <a
+              href="/"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
               style={{
@@ -102,6 +103,7 @@ function Menu() {
               Home
             </a>
             <a
+              href="/art-therapy"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
               style={{
