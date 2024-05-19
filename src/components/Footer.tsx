@@ -35,7 +35,7 @@ function Footer() {
             <a href="/">Home</a>
             <a href="/art-therapy">Art Therapy</a>
             <a href="/about-us">About Us</a>
-            <a href="/">Contacts</a>
+            <a href="/contacts">Contacts</a>
           </div>
         </div>
       </div>

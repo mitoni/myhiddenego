@@ -127,6 +127,7 @@ function Menu() {
               About Us
             </a>
             <a
+              href="/contacts"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
               style={{

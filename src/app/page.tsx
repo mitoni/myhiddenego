@@ -102,7 +102,7 @@ export default function Home() {
         >
           <div className="mr-4 sm:mr-20 mb-16 flex justify-end">
             <a
-              href="/"
+              href="/contacts"
               className="uppercase font-semibold px-4 py-2 border border-[#f0298c]"
             >
               subscribe to the newsletter
