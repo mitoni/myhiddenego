@@ -107,7 +107,7 @@ export default function Home() {
               href="/contacts"
               className="uppercase font-semibold px-4 py-2 border border-[#f0298c]"
             >
-              subscribe to the newsletter
+              subsribe to the newsletter
             </Link>
           </div>
         </div>

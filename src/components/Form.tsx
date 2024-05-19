@@ -39,7 +39,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="grid grid-cols-[min-content_min-content] grid-rows-2 gap-4 w-0 flex-1">
+      <div className="grid grid-cols-[min-content_min-content] grid-rows-2 gap-4 w-full">
         <label htmlFor="form-name">Name</label>
         <input
           id="form-name"
