@@ -18,21 +18,28 @@ export async function POST(request: Request) {
   // });
 
   try {
-    await fetch("https://us22.api.mailchimp.com/3.0/lists/35bf9ab309/members", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Basic " + process.env.MAILCHIMP_API_KEY,
-      },
-      body: JSON.stringify({
-        email_address: data["email"],
-        status: "subscribed",
-        merge_fields: {
-          FNAME: first,
-          LNAME: last,
+    const res = await fetch(
+      "https://us22.api.mailchimp.com/3.0/lists/35bf9ab309/members",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Basic " + process.env.MAILCHIMP_API_KEY,
         },
-      }),
-    });
+        body: JSON.stringify({
+          email_address: data["email"],
+          status: "subscribed",
+          merge_fields: {
+            FNAME: first,
+            LNAME: last,
+          },
+        }),
+      },
+    );
+
+    const body = await res.json();
+
+    if (body.status != "subscribed") throw new Error();
 
     return new Response(JSON.stringify({ status: "ok" }), {
       headers: { "Content-Type": "application/json" },

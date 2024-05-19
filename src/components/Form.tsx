@@ -20,10 +20,11 @@ export default function Form() {
 
     setStatus("loading");
     try {
-      await fetch("/api/subscribe", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
         body: JSON.stringify(data),
       });
+      if (res.status !== 200) throw new Error();
       setStatus("ok");
     } catch (error) {
       setStatus("error");
