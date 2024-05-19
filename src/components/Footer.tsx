@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -32,10 +33,10 @@ function Footer() {
         </div>
         <div className="flex justify-center sm:justify-end items-center">
           <div className="flex flex-col items-start">
-            <a href="/">Home</a>
-            <a href="/art-therapy">Art Therapy</a>
-            <a href="/about-us">About Us</a>
-            <a href="/contacts">Contacts</a>
+            <Link href="/">Home</Link>
+            <Link href="/art-therapy">Art Therapy</Link>
+            <Link href="/about-us">About Us</Link>
+            <Link href="/contacts">Contacts</Link>
           </div>
         </div>
       </div>

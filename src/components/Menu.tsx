@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -25,6 +27,11 @@ function Menu() {
   const hover = React.useRef<HTMLElement>(null!);
 
   const [isOpen, setOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  React.useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const handleMouseMove = React.useCallback((event: React.MouseEvent) => {
     if (!dot.current) return;
@@ -90,7 +97,7 @@ function Menu() {
             className="flex flex-1 flex-col justify-center items-center gap-4 pointer-events-auto"
             onMouseMove={handleMouseMove}
           >
-            <a
+            <Link
               href="/"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
@@ -101,8 +108,8 @@ function Menu() {
               }}
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/art-therapy"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
@@ -113,8 +120,8 @@ function Menu() {
               }}
             >
               Art Therapy
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about-us"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
@@ -125,8 +132,8 @@ function Menu() {
               }}
             >
               About Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contacts"
               data-m-item
               className="text-3xl sm:text-5xl font-semibold"
@@ -137,7 +144,7 @@ function Menu() {
               }}
             >
               Contacts
-            </a>
+            </Link>
           </div>
 
           <div className="flex-grow-1 flex flex-row gap-4 pointer-events-auto">

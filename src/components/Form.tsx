@@ -1,24 +1,45 @@
 "use client";
 
+import { motion } from "framer-motion";
+import React from "react";
+import { AiOutlineLoading } from "react-icons/ai";
+import { FaCheck } from "react-icons/fa";
+import { MdOutlineError } from "react-icons/md";
+
 export default function Form() {
+  const [status, setStatus] = React.useState<
+    "ok" | "error" | "loading" | undefined
+  >(undefined);
+
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    const data = new FormData(event.target as HTMLFormElement).get("email");
+
+    const data = Object.fromEntries(
+      new FormData(event.target as HTMLFormElement).entries(),
+    );
+
+    setStatus("loading");
     try {
-      const res = await fetch("/api/subscribe", {
+      await fetch("/api/subscribe", {
         method: "POST",
         body: JSON.stringify(data),
       });
-      const json = await res.json();
-      console.log(json);
+      setStatus("ok");
     } catch (error) {
+      setStatus("error");
       console.error(error);
     }
   }
 
+  const animations = {
+    initial: { opacity: 0, translateX: "100%" },
+    animate: { opacity: 1, translateX: "0%" },
+    exit: { opacity: 0, translateX: "-100%" },
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <div className="grid grid-cols-[min-content_min-content] grid-rows-2 gap-4">
+      <div className="grid grid-cols-[min-content_min-content] grid-rows-2 gap-4 w-0 flex-1">
         <label htmlFor="form-name">Name</label>
         <input
           id="form-name"
@@ -41,8 +62,26 @@ export default function Form() {
       <div className="w-full flex justify-end">
         <button
           type="submit"
-          className="uppercase font-semibold mt-4 px-4 py-2 border border-[#f0298c]"
+          className="uppercase font-semibold mt-4 px-4 py-2 border border-[#f0298c] inline-flex items-center gap-2"
         >
+          {status === "ok" ? (
+            <motion.span {...animations}>
+              <FaCheck />
+            </motion.span>
+          ) : null}
+          {status === "error" ? (
+            <motion.span {...animations}>
+              <MdOutlineError />
+            </motion.span>
+          ) : null}
+          {status === "loading" ? (
+            <motion.span
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity }}
+            >
+              <AiOutlineLoading />
+            </motion.span>
+          ) : null}
           subscribe to the newsletter
         </button>
       </div>

@@ -105,11 +105,11 @@ export default function ArtTherapy() {
         </h2>
       </div>
 
-      <section className="pb-64">
+      <section className="pb-80">
         <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2">
           <div className="relative flex flex-col justify-end">
             <div
-              className="absolute inset-0 sm:w-[150%] h-full bg-center bg-cover z-[-1]"
+              className="absolute inset-0 sm:w-[150%] h-[110%] bg-center bg-cover z-[-1]"
               style={{
                 backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE05.jpg)",
               }}
@@ -124,7 +124,7 @@ export default function ArtTherapy() {
             </div>
           </div>
 
-          <div className="relative sm:top-[50%] sm:left-[-25%] sm:w-[125%] p-4 sm:p-16">
+          <div className="relative sm:top-[70%] sm:left-[-25%] sm:w-[125%] p-4 sm:p-16 text-right">
             <div className="absolute inset-0 bg-[#ff448f] z-[-1]" />
             <p>
               Luckily, there is culture, the only thing capable of redeeming
@@ -339,8 +339,15 @@ export default function ArtTherapy() {
       </div>
 
       <section>
-        <div className="grid-rows-2 sm:grid grid-rows-1 grid-cols-1 sm:grid-cols-2">
-          <div className="relative text-[#46b0fe] font-semibold">
+        <div className="h-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2">
+          <div
+            className="col-start-1 col-end-3 row-start-1 row-end-3 bg-no-repeat bg-contain bg-right-bottom z-[-1]"
+            style={{
+              backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE10.jpg)",
+            }}
+          ></div>
+
+          <div className="col-start-1 col-end-2 row-start-1 row-end-2 text-[#46b0fe] font-semibold p-4 sm:p-0">
             <p>
               “…I often feel that people come to me to be photographed as they
               would go to a doctor or a fortune teller to find out how they are.
@@ -353,15 +360,6 @@ export default function ArtTherapy() {
               there’s nothing left except the photograph.”.
             </p>
             <p>Richard Avedon</p>
-          </div>
-
-          <div className="relative z-[-1] min-h-64">
-            <div
-              className="absolute inset-0 sm:left-[-50%] bottom-0 sm:w-[200%] sm:h-[150%] bg-contain bg-no-repeat bg-bottom"
-              style={{
-                backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE10.jpg)",
-              }}
-            />
           </div>
         </div>
       </section>

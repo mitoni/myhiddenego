@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main>
@@ -8,7 +10,7 @@ export default function Home() {
             "linear-gradient(#1d1d1bB3, #1d1d1bB3), url(/imgs/Monica-Silva-Rossella-MHE-Home.jpg)",
         }}
       >
-        <div className="py-16 min-h-96">
+        <div className="px-4 py-16 min-h-96">
           <p className="italic">
             “…it is the artist&apos;s gaze on the world that is fundamental both
             when he communicates beauty and joy to us, and when, much more
@@ -26,7 +28,7 @@ export default function Home() {
         <h2 className="text-[#46b0fe] uppercase">THE PROJECT</h2>
       </div>
 
-      <section className="bg-[#1d1d1b] py-16 min-h-80 flex flex-col justify-center">
+      <section className="bg-[#1d1d1b] px-4 py-16 min-h-80 flex flex-col justify-center">
         <div>
           <p>
             Welcome to MY HIDDEN EGO a transformative project conceived by
@@ -101,12 +103,12 @@ export default function Home() {
           }}
         >
           <div className="mr-4 sm:mr-20 mb-16 flex justify-end">
-            <a
+            <Link
               href="/contacts"
               className="uppercase font-semibold px-4 py-2 border border-[#f0298c]"
             >
               subscribe to the newsletter
-            </a>
+            </Link>
           </div>
         </div>
       </div>

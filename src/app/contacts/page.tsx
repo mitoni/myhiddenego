@@ -18,7 +18,7 @@ export default function Contacts() {
       </section>
 
       <section className="mt-48">
-        <div className="h-full grid grid-cols-2 grid-rows-2">
+        <div className="h-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2">
           <div
             className="col-start-1 col-end-3 row-start-1 row-end-3 bg-no-repeat bg-contain bg-right-bottom z-[-1]"
             style={{
