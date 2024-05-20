@@ -1,26 +1,15 @@
 "use client";
 
 import Form from "@/components/Form";
-import Image from "next/image";
 import { FiMail } from "react-icons/fi";
 
 export default function Contacts() {
   return (
     <main>
-      <section className="absolute inset-0 z-10 pointer-events-none">
-        <Image
-          className="p-4"
-          src="/imgs/logo_mhe_col.svg"
-          alt="logo my hidden ego"
-          width={240}
-          height={240}
-        />
-      </section>
-
       <section className="mt-48">
         <div className="h-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2">
           <div
-            className="col-start-1 col-end-3 row-start-1 row-end-3 bg-no-repeat bg-contain bg-right-bottom z-[-1]"
+            className="col-start-1 col-end-3 row-start-2 sm:row-start-1 row-end-3 bg-no-repeat bg-contain bg-bottom sm:bg-right-bottom z-[-1]"
             style={{
               backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE17.jpg)",
             }}
@@ -37,6 +26,8 @@ export default function Contacts() {
 
             <Form />
           </div>
+
+          <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-8 items-start bg-[#fad70c] p-4 sm:p-16 z-[-1] translate-x-4 translate-y-8"></div>
         </div>
       </section>
     </main>

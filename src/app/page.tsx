@@ -10,8 +10,8 @@ export default function Home() {
             "linear-gradient(#1d1d1bB3, #1d1d1bB3), url(/imgs/Monica-Silva-Rossella-MHE-Home.jpg)",
         }}
       >
-        <div className="px-4 py-16 min-h-96">
-          <p className="italic">
+        <div className="px-4 py-16 min-h-[75vh] flex flex-col justify-center">
+          <p className="italic ">
             “…it is the artist&apos;s gaze on the world that is fundamental both
             when he communicates beauty and joy to us, and when, much more
             often, he confronts us with pain and anguish. Because in art there

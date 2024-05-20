@@ -3,16 +3,6 @@ import Image from "next/image";
 export default function AboutUs() {
   return (
     <main>
-      <section className="absolute top-0 left-0 z-10">
-        <Image
-          className="p-4"
-          src="/imgs/logo_mhe_col.svg"
-          alt="logo my hidden ego"
-          width={240}
-          height={240}
-        />
-      </section>
-
       <section
         className="bg-top bg-cover h-screen"
         style={{
@@ -144,62 +134,58 @@ export default function AboutUs() {
         </h2>
       </div>
 
-      <section className="pb-16">
-        <div className="grid sm:grid-rows-[1fr_min-content] grid-cols-1">
-          <div className="w-full flex justify-end">
-            <div
-              className="inset-0 w-full sm:w-1/2 h-screen bg-center bg-cover"
-              style={{
-                backgroundImage: "url(/imgs/MonicaSilva_MHE.jpg)",
-              }}
-            />
-          </div>
-
-          <div className="relative p-4 sm:p-16">
-            <div className="absolute inset-0 sm:left-[-10%] top-[-30%] sm:w-[115%] bg-[#fad70c] z-[-1]" />
-            <p>
-              Monica Silva, the visionary artist and creator of MHE, promotes
-              the fusion of therapeutic photography masterclasses with specially
-              curated motivational kits designed to provide valuable
-              psychological support. Our mission transcends conventional
-              boundaries; it’s about nurturing self-esteem, unveiling the
-              complexities of one's personality, embracing individuality, and
-              fortifying psychological resilience through the transformative
-              power of art. At the core of MHE's ethos is the awareness that its
-              impact goes far beyond the individual. It’s a ripple effect, a
-              shared journey where art connects to humanity. Although Monica
-              Silva’s personal history fueled the birth of MHE, its essence lies
-              in enabling others to harness their creative potential and share
-              the collective healing journey. MHE is more than a project; it's a
-              testament to the transformative power of resilience and human
-              connection. It’s a collaborative effort, a testimony to the
-              collective strength of individuals united by a shared vision of
-              healing through art. Join us as we embark on a journey of
-              self-discovery, empowerment, and collective healing. Together, we
-              uncover the hidden depths of our true selves and embrace the
-              beauty of our shared humanity. In the captivating images of Monica
-              Silva, we find an intense journey of resilience and
-              self-discovery. With each shutter click, the artist transcends the
-              boundaries of her past, weaving a mosaic of emotions and
-              experiences that resonate with the human soul of those before her.
-              Monica's artistic journey testifies to the transformative power of
-              photography. Her life has been marked by an abusive and violent
-              childhood, and her camera has become a gateway to liberation and
-              healing. Through the lens, she found solace, creating a sacred
-              space to confront the many souls residing within her. For Monica,
-              photography is more than a skill; it’s a lifeline, a means to
-              survive in a world demanding strength and invincibility. It’s a
-              journey of self-discovery, an exploration of identity in an era
-              dominated by images and illusions. Navigating the complexities of
-              contemporary society, Monica's work serves as a beacon of hope,
-              reminding us that culture has the power to redeem and restore.
-              Through her lens, she invites us to embrace vulnerability,
-              confront our deepest demons, and emerge stronger and more
-              resilient than ever. Join Monica Silva on a journey of
-              self-discovery and redemption: a journey where every image tells a
-              story and every soul finds solace in the beauty of art.
-            </p>
-          </div>
+      <section className="mt-64 pb-16">
+        <div className="bg-[#fad70c] p-4 sm:p-16">
+          <div
+            className="w-full sm:w-1/2 h-[75vh] bg-center bg-cover float-right -mt-64"
+            style={{
+              backgroundImage: "url(/imgs/MonicaSilva_MHE.jpg)",
+            }}
+          />
+          <p>
+            Monica Silva, the visionary artist and creator of MHE, promotes the
+            fusion of therapeutic photography masterclasses with specially
+            curated motivational kits designed to provide valuable psychological
+            support. Our mission transcends conventional boundaries; it’s about
+            nurturing self-esteem, unveiling the complexities of one's
+            personality, embracing individuality, and fortifying psychological
+            resilience through the transformative power of art. At the core of
+            MHE's ethos is the awareness that its impact goes far beyond the
+            individual. It’s a ripple effect, a shared journey where art
+            connects to humanity. Although Monica Silva’s personal history
+            fueled the birth of MHE, its essence lies in enabling others to
+            harness their creative potential and share the collective healing
+            journey. MHE is more than a project; it's a testament to the
+            transformative power of resilience and human connection. It’s a
+            collaborative effort, a testimony to the collective strength of
+            individuals united by a shared vision of healing through art. Join
+            us as we embark on a journey of self-discovery, empowerment, and
+            collective healing.
+          </p>
+          <p>
+            Together, we uncover the hidden depths of our true selves and
+            embrace the beauty of our shared humanity. In the captivating images
+            of Monica Silva, we find an intense journey of resilience and
+            self-discovery. With each shutter click, the artist transcends the
+            boundaries of her past, weaving a mosaic of emotions and experiences
+            that resonate with the human soul of those before her. Monica's
+            artistic journey testifies to the transformative power of
+            photography. Her life has been marked by an abusive and violent
+            childhood, and her camera has become a gateway to liberation and
+            healing. Through the lens, she found solace, creating a sacred space
+            to confront the many souls residing within her. For Monica,
+            photography is more than a skill; it’s a lifeline, a means to
+            survive in a world demanding strength and invincibility. It’s a
+            journey of self-discovery, an exploration of identity in an era
+            dominated by images and illusions. Navigating the complexities of
+            contemporary society, Monica's work serves as a beacon of hope,
+            reminding us that culture has the power to redeem and restore.
+            Through her lens, she invites us to embrace vulnerability, confront
+            our deepest demons, and emerge stronger and more resilient than
+            ever. Join Monica Silva on a journey of self-discovery and
+            redemption: a journey where every image tells a story and every soul
+            finds solace in the beauty of art.
+          </p>
         </div>
       </section>
 
