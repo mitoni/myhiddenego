@@ -1,11 +1,13 @@
 "use client";
 
 import Form from "@/components/Form";
+import Logo from "@/components/Logo";
 import { FiMail } from "react-icons/fi";
 
 export default function Contacts() {
   return (
     <main>
+      <Logo />
       <section className="mt-48">
         <div className="h-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2">
           <div
@@ -17,11 +19,11 @@ export default function Contacts() {
 
           <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-8 items-start bg-[#46b0fe] p-4 sm:p-16">
             <a
-              href="mailto:stocazzo@gmail.com"
+              href="infos.mhe@gmail.com"
               className="inline-flex gap-2 items-center"
             >
               <FiMail />
-              writeme@myhiddenego.com
+              infos.mhe@gmail.com
             </a>
 
             <Form />

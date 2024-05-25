@@ -3,24 +3,40 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <section
-        className="bg-center bg-cover bg-blend-multiply"
-        style={{
-          backgroundImage:
-            "linear-gradient(#1d1d1bB3, #1d1d1bB3), url(/imgs/Monica-Silva-Rossella-MHE-Home.jpg)",
-        }}
-      >
-        <div className="px-4 py-16 min-h-[75vh] flex flex-col justify-center">
-          <p className="italic ">
-            “…it is the artist&apos;s gaze on the world that is fundamental both
-            when he communicates beauty and joy to us, and when, much more
-            often, he confronts us with pain and anguish. Because in art there
-            is always some possibility of redemption. Or at least, I want to
-            continue to believe it: not surprisingly, I speak of art as
-            restoration.”
-          </p>
-          <p className="text-right">Stefano Ferrari (The Mirror of the Self)</p>
-        </div>
+      <section className="relative h-screen">
+        <section
+          className="absolute inset-0 bg-cover sm:hidden"
+          style={{
+            backgroundImage:
+              "url(/imgs/Monica-Silva-Rossella-MHE-Home-mobile.jpg)",
+          }}
+        />
+
+        <section
+          className="absolute inset-0 bg-cover hidden sm:block"
+          style={{
+            backgroundImage: "url(/imgs/Monica-Silva-Rossella-MHE-Home.jpg)",
+          }}
+        />
+
+        <section
+          className="absolute bottom-0 left-0 right-0 "
+          style={{ backgroundColor: "#1d1d1bB3" }}
+        >
+          <div className="px-4 py-16 flex flex-col justify-center">
+            <p className="italic ">
+              “…it is the artist&apos;s gaze on the world that is fundamental
+              both when he communicates beauty and joy to us, and when, much
+              more often, he confronts us with pain and anguish. Because in art
+              there is always some possibility of redemption. Or at least, I
+              want to continue to believe it: not surprisingly, I speak of art
+              as restoration.”
+            </p>
+            <p className="text-right">
+              Stefano Ferrari (The Mirror of the Self)
+            </p>
+          </div>
+        </section>
       </section>
 
       <div className="absolute font-semibold text-4xl sm:text-7xl -translate-y-1/2 inline-flex items-center">
@@ -28,8 +44,8 @@ export default function Home() {
         <h2 className="text-[#46b0fe] uppercase">THE PROJECT</h2>
       </div>
 
-      <section className="bg-[#1d1d1b] px-4 py-16 min-h-80 flex flex-col justify-center">
-        <div>
+      <section className="bg-[#1d1d1b] min-h-[33vh] flex flex-col justify-center">
+        <div className="px-4 py-16">
           <p>
             Welcome to MY HIDDEN EGO a transformative project conceived by
             Monica Silva, where the lens of photography becomes a portal to

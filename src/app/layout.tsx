@@ -5,7 +5,6 @@ import { Poppins } from "next/font/google";
 import { CirclePointer } from "@/components/CirclePointer";
 import { Menu } from "@/components/Menu";
 import { Footer } from "@/components/Footer";
-import Logo from "@/components/Logo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,7 +27,6 @@ export default function RootLayout({
       <body className={poppins.className}>
         <CirclePointer />
         <Menu />
-        <Logo />
         {children}
         <Footer />
       </body>

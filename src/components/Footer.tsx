@@ -7,16 +7,19 @@ function Footer() {
     <footer className="min-h-48 bg-[#1d1d1b] text-sm">
       <div className="pt-16 pb-8 grid grid-rows-3 sm:grid-rows-1 grid-cols-1 sm:grid-cols-3">
         <div className="flex gap-4 items-center justify-center sm:justify-start">
-          <a>
+          <a href="https://www.facebook.com/MHEPROJECTS" target="_blank">
             <FaFacebook />
           </a>
-          <a>
+          <a href="https://www.tiktok.com/@mhe.project" target="_blank">
             <FaTiktok />
           </a>
-          <a>
+          <a href="https://WWW.INSTAGRAM.COM/MHE_PROJECT" target="_blank">
             <FaInstagram />
           </a>
-          <a>
+          <a
+            href="https://www.linkedin.com/company/my-hidden-ego-project/"
+            target="_blank"
+          >
             <FaLinkedin />
           </a>
         </div>

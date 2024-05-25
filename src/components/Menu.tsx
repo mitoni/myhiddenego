@@ -148,16 +148,19 @@ function Menu() {
           </div>
 
           <div className="flex-grow-1 flex flex-row gap-4 pointer-events-auto">
-            <a>
+            <a href="https://www.facebook.com/MHEPROJECTS" target="_blank">
               <FaFacebook />
             </a>
-            <a>
+            <a href="https://www.tiktok.com/@mhe.project" target="_blank">
               <FaTiktok />
             </a>
-            <a>
+            <a href="https://WWW.INSTAGRAM.COM/MHE_PROJECT" target="_blank">
               <FaInstagram />
             </a>
-            <a>
+            <a
+              href="https://www.linkedin.com/company/my-hidden-ego-project/"
+              target="_blank"
+            >
               <FaLinkedin />
             </a>
           </div>

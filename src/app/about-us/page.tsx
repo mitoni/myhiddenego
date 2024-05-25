@@ -1,8 +1,10 @@
-import Image from "next/image";
+import Logo from "@/components/Logo";
 
 export default function AboutUs() {
   return (
     <main>
+      <Logo />
+
       <section
         className="bg-top bg-cover h-screen"
         style={{

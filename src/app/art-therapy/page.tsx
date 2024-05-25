@@ -1,6 +1,9 @@
+import Logo from "@/components/Logo";
+
 export default function ArtTherapy() {
   return (
     <main>
+      <Logo />
       <section
         className="bg-center bg-cover h-screen"
         style={{
@@ -18,7 +21,7 @@ export default function ArtTherapy() {
       </div>
 
       <section className="py-16 bg-[#1d1d1b]">
-        <div className="mt-16">
+        <div className="p-4 sm:p-16 mt-16">
           <p>
             "Therapeutic" photography, according to the psychoanalytic model, is
             a very useful path both to become more aware of one's physical
@@ -104,7 +107,7 @@ export default function ArtTherapy() {
               }}
             />
 
-            <div className="p-8 sm:w-[75%] font-semibold text-[#ff448f] sm:translate-y-1/3">
+            <div className="p-8 sm:w-[75%] font-semibold text-[#ff448f] sm:translate-y-[110%]">
               <p className="text-right">
                 “The authentic task of the photographic portrait is to extract
                 the psychological truth of the subject..”
@@ -187,7 +190,7 @@ export default function ArtTherapy() {
               backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE07_1.jpg)",
             }}
           ></div>
-          <div className="text-[#ff448f]">
+          <div className="p-4 sm:p-16 text-[#ff448f]">
             Between 2010 and 2011, the artist emerged from contemplating theory
             to stage an ambitious project entitled MY HIDDEN EGO, in search of a
             secret “I”, one that is hidden from most people and perhaps even
@@ -226,7 +229,7 @@ export default function ArtTherapy() {
           backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE08.jpg)",
         }}
       >
-        <div className="text-[#fad70c]">
+        <div className="p-4 sm:p-16 text-[#fad70c]">
           <p className="font-semibold">PSYCHOLOGICAL AND SOCIAL IMPLICATION</p>
           <p>
             “Every morning you look in the mirror and what you see collides with
@@ -243,8 +246,9 @@ export default function ArtTherapy() {
           </p>
         </div>
       </section>
+
       <section className="bg-[#fad70c] pb-8">
-        <div>
+        <div className="p-4 sm:p-16">
           <p>
             Modern artists are a long way from exhausting the strength and
             potential of the self-portrait and when the self-portrait is used
@@ -328,15 +332,15 @@ export default function ArtTherapy() {
       </div>
 
       <section>
-        <div className="h-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2">
+        <div className="h-full grid grid-cols-1 sm:grid-cols-4 grid-rows-2">
           <div
-            className="col-start-1 col-end-3 row-start-1 row-end-3 bg-no-repeat bg-contain bg-right-bottom z-[-1]"
+            className="col-start-2 col-end-5 row-start-1 row-end-3 bg-no-repeat bg-contain bg-right-bottom z-[-1]"
             style={{
               backgroundImage: "url(/imgs/Monica-Silva-Portrait-MHE10.jpg)",
             }}
           ></div>
 
-          <div className="col-start-1 col-end-2 row-start-1 row-end-2 text-[#46b0fe] font-semibold p-4 sm:p-0">
+          <div className="col-start-1 col-end-3 row-start-1 row-end-2 text-[#46b0fe] font-semibold p-4 sm:p-0">
             <p>
               “…I often feel that people come to me to be photographed as they
               would go to a doctor or a fortune teller to find out how they are.
