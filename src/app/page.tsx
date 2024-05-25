@@ -1,8 +1,11 @@
+import Logo from "@/components/Logo";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
+      <Logo className="sm:invisible" />
+
       <section className="relative h-screen">
         <section
           className="absolute inset-0 bg-cover sm:hidden"
