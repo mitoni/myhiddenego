@@ -1,23 +1,25 @@
 export async function POST(request: Request) {
-  const data = await request.json();
-
-  if (!data["name"]) return new Response(null, { status: 400 });
-  if (!data["email"]) return new Response(null, { status: 400 });
-
-  let [first, ...last] = data["name"]?.split(" ");
-  last = last.join(" ");
-
-  // return new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve(
-  //       new Response(JSON.stringify({ status: "ok" }), {
-  //         headers: { "Content-Type": "application/json" },
-  //       }),
-  //     );
-  //   }, 1000);
-  // });
-
   try {
+    const data = await request.json();
+
+    if (!data["name"]) return new Response(null, { status: 400 });
+    if (!data["email"]) return new Response(null, { status: 400 });
+
+    let [first, ...last] = data["name"]?.split(" ");
+    last = last.join(" ");
+
+    console.log({ data, first, last });
+
+    // return new Promise((resolve) => {
+    //   setTimeout(() => {
+    //     resolve(
+    //       new Response(JSON.stringify({ status: "ok" }), {
+    //         headers: { "Content-Type": "application/json" },
+    //       }),
+    //     );
+    //   }, 1000);
+    // });
+
     const res = await fetch(
       "https://us22.api.mailchimp.com/3.0/lists/35bf9ab309/members",
       {
@@ -39,7 +41,7 @@ export async function POST(request: Request) {
 
     const body = await res.json();
 
-    if (body.status != "subscribed") throw new Error();
+    if (body.status != "subscribed") throw new Error(body.detail);
 
     return new Response(JSON.stringify({ status: "ok" }), {
       headers: { "Content-Type": "application/json" },
