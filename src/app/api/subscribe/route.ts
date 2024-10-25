@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     let [first, ...last] = data["name"]?.split(" ");
     last = last.join(" ");
 
-    console.log({ data, first, last });
+    // console.log({ data, first, last });
 
     // return new Promise((resolve) => {
     //   setTimeout(() => {
@@ -41,13 +41,18 @@ export async function POST(request: Request) {
 
     const body = await res.json();
 
-    if (body.status != "subscribed") throw new Error(body.detail);
+    if (body.status != "subscribed") {
+      console.error(body);
+      throw new Error(body.title);
+    }
 
     return new Response(JSON.stringify({ status: "ok" }), {
       headers: { "Content-Type": "application/json" },
     });
   } catch (err) {
     console.error(err);
-    return new Response(null, { status: 500 });
+    return new Response(JSON.stringify({ message: (err as Error).message }), {
+      status: 500,
+    });
   }
 }

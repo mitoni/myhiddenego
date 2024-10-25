@@ -11,6 +11,24 @@ export default function Form() {
     "ok" | "error" | "loading" | undefined
   >(undefined);
 
+  const [message, setMessage] = React.useState<string | undefined>(undefined);
+
+  const displayMessage = React.useMemo(() => {
+    switch (message?.toLowerCase()) {
+      case "member exists":
+        return "L'indirizzo email è già presente nella lista come membro esistente.";
+      case "forgotten email not subscribed":
+        return "L'email fornita non risulta iscritta alla lista specificata. Ciò può accadere quando si tenta di aggiornare o aggiungere dati per un utente non iscritto.";
+      case "invalid resource":
+      case "invalid email address":
+        return "L’indirizzo email fornito non è valido o non è formattato correttamente.";
+      case "Invalid Parameters":
+        return "Uno o più parametri della richiesta non sono validi o mancano.";
+      default:
+        return message;
+    }
+  }, [message]);
+
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
 
@@ -19,16 +37,20 @@ export default function Form() {
     );
 
     setStatus("loading");
+    setMessage(undefined);
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         body: JSON.stringify(data),
       });
-      if (res.status !== 200) throw new Error();
+      if (res.status !== 200) {
+        const body = await res.json();
+        throw new Error(body.message);
+      }
       setStatus("ok");
     } catch (error) {
       setStatus("error");
-      console.error(error);
+      setMessage((error as Error).message);
     }
   }
 
@@ -39,8 +61,8 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="grid grid-cols-[min-content_min-content] grid-rows-2 gap-4 w-full">
+    <form onSubmit={handleSubmit} className="w-full">
+      <div className="grid grid-cols-[min-content_auto] grid-rows-2 gap-4 w-full">
         <label htmlFor="form-name">Name</label>
         <input
           id="form-name"
@@ -85,6 +107,9 @@ export default function Form() {
           ) : null}
           subscribe to the newsletter
         </button>
+      </div>
+      <div className="w-full py-2 text-sm overflow-visible h-12">
+        {message ? displayMessage : null}
       </div>
     </form>
   );
