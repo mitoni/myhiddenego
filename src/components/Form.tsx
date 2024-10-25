@@ -48,6 +48,7 @@ export default function Form() {
         throw new Error(body.message);
       }
       setStatus("ok");
+      setMessage("Sei ora iscritto alla newsletter!");
     } catch (error) {
       setStatus("error");
       setMessage((error as Error).message);
